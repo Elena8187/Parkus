@@ -38,7 +38,8 @@ html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--mist);color:var(--ink);font:400 17px/1.65 var(--f-body);-webkit-font-smoothing:antialiased}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:4px}
-.wrap{max-width:1200px;margin:0 auto;padding:0 var(--gutter)}
+.wrap{max-width:none;margin:0 auto;padding:0 clamp(16px,4.2vw,72px)}
+.col{max-width:1400px;margin:0 auto}
 .skip{position:absolute;left:-9999px}
 .skip:focus{left:16px;top:16px;z-index:10;background:var(--white);padding:10px 14px;border-radius:8px}
 
@@ -56,19 +57,22 @@ a{color:inherit}
 .eyebrow::before{content:"";width:28px;height:2px;background:var(--cyan)}
 h1{margin:0;font:900 clamp(40px,7vw,84px)/.95 var(--f-display);font-stretch:75%;text-transform:uppercase;letter-spacing:-.005em;text-wrap:balance}
 h1 em{font-style:normal;color:var(--cyan)}
-.meta{display:flex;flex-wrap:wrap;gap:8px 28px;margin:26px 0 0;color:var(--on-dark-soft);font-size:15px}
+.meta{display:flex;flex-wrap:nowrap;gap:8px clamp(14px,2.2vw,32px);margin:26px 0 0;color:var(--on-dark-soft);font-size:clamp(13px,1.2vw,15px)}
+.meta>span{white-space:nowrap}
+@media (max-width:760px){.meta{flex-direction:column;gap:6px;font-size:15px}}
 .meta b{color:var(--white);font-weight:600}
 .meta a{color:var(--white);text-decoration:none;border-bottom:2px solid var(--cyan)}
 
 /* Body */
 main{padding:clamp(32px,5vw,64px) 0 clamp(56px,8vw,96px)}
-.doc{background:var(--white);border:1px solid var(--line-light);border-radius:24px;padding:clamp(24px,5vw,56px);max-width:860px}
+.doc{background:var(--white);border:1px solid var(--line-light);border-radius:24px;padding:clamp(24px,5vw,64px) clamp(20px,4vw,64px)}
 .doc .summary{border-left:4px solid var(--cyan);background:rgba(0,217,232,.08);border-radius:0 14px 14px 0;padding:18px 20px;margin:0 0 36px;font-weight:500}
 .doc h2{font:800 clamp(22px,2.6vw,28px)/1.15 var(--f-display);font-stretch:85%;margin:40px 0 12px;padding-top:28px;border-top:1px solid var(--line-light);display:flex;gap:14px;align-items:baseline}
 .doc h2.first{border-top:0;padding-top:0;margin-top:0}
 .doc h2 span{font:800 14px/1 var(--f-body);color:var(--cyan-ink);letter-spacing:.06em;min-width:24px}
 .doc p,.doc ul{margin:0 0 14px;color:var(--ink-soft)}
 .doc ul{padding-left:22px}
+.nw{white-space:nowrap}
 .doc li{margin-bottom:6px}
 .doc strong{color:var(--ink)}
 .todo{display:block;border:1.5px dashed #9FB0BA;border-radius:12px;padding:14px 16px;color:#6B7883;font-style:italic;background:var(--mist)}
@@ -122,16 +126,16 @@ footer{background:var(--graphite);color:var(--on-dark-soft);padding:40px 0;font-
 </div>
 
 <header class="hero">
-  <div class="wrap">
+  <div class="wrap"><div class="col">
     <p class="eyebrow">ALPR/LPR Privacy &amp; Usage Policy</p>
     <h1>License Plate <em>Recognition</em></h1>
-    <p class="meta"><span>Operator: <b>Parking Solutions, LLC</b></span><span>Privacy contact: <b><a href="mailto:info@parkus.net" target="_blank" rel="noopener">info@parkus.net</a></b></span></p>
-  </div>
+    <p class="meta"><span>Operator: <b>Parking Solutions, LLC</b></span><span>Last updated: <b>November 6, 2026</b></span><span>Privacy contact: <b><a href="mailto:info@parkus.net" target="_blank" rel="noopener">info@parkus.net</a></b></span></p>
+  </div></div>
 </header>
 
 <main id="notice">
   <div class="wrap">
-    <article class="doc">
+    <article class="doc"><div class="col">
       <!-- Text approved by PARKUS (2026-11-03). Bracketed placeholders must be filled before the page goes live on the domain. -->
       <section class="notice-box" aria-labelledby="notice-h">
         <h2 id="notice-h">Notice: License plate recognition in use</h2>
@@ -228,9 +232,9 @@ footer{background:var(--graphite);color:var(--on-dark-soft);padding:40px 0;font-
         <p>Parking signage may provide a direct link or QR code to this policy.</p>
 
         <h2 id="updates"><span>11</span>Compliance and Updates</h2>
-        <p>The operator shall periodically review this policy and its ALPR practices for compliance with applicable federal and California laws, including California Civil Code Sections 1798.90.5&ndash;1798.90.55, as applicable.</p>
+        <p>The operator shall periodically review this policy and its ALPR practices for compliance with applicable federal and California laws, including California Civil Code Sections <span class="nw">1798.90.5&ndash;1798.90.55</span>, as applicable.</p>
         <p>This policy does not waive any rights or remedies provided by law.</p>
-    </article>
+    </div></article>
   </div>
 </main>
 
