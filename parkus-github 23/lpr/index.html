@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ALPR/LPR Privacy &amp; Usage Policy | PARKUS</title>
+<meta name="description" content="How license plate recognition (ALPR/LPR) information is collected, used, accessed, shared, protected and deleted at PARKUS-managed parking locations.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PARKUS">
+<meta property="og:title" content="ALPR/LPR Privacy &amp; Usage Policy | PARKUS">
+<meta property="og:description" content="How license plate recognition (ALPR/LPR) information is collected, used, shared, protected and deleted at PARKUS-managed parking locations.">
+<meta property="og:url" content="https://elena8187.github.io/parkus/lpr/">
+<meta property="og:image" content="https://elena8187.github.io/parkus/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://elena8187.github.io/parkus/og-image.png">
+<link rel="shortcut icon" href="../favicon.ico">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400..700&display=swap">
+<style>
+:root{
+  --cyan:#00D9E8;--cyan-ink:#00727B;--graphite:#101419;--graphite-2:#171D23;
+  --white:#FFFFFF;--mist:#F4F7F8;--ink:#101419;--ink-soft:#4A5661;--on-dark-soft:#A9B5BF;
+  --line-light:#D9E1E5;--line-dark:rgba(255,255,255,.11);
+  --f-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --f-body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --gutter:clamp(16px,4vw,40px);
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--mist);color:var(--ink);font:400 17px/1.65 var(--f-body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:4px}
+.wrap{max-width:none;margin:0 auto;padding:0 clamp(16px,4.2vw,72px)}
+.col{max-width:1400px;margin:0 auto}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:16px;top:16px;z-index:10;background:var(--white);padding:10px 14px;border-radius:8px}
+
+/* Header */
+.hdr-band{background:var(--graphite);color:var(--white);border-bottom:1px solid var(--line-dark)}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
+.logo{font:900 28px/1 var(--f-display);font-stretch:85%;letter-spacing:.01em;color:var(--white);text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+.logo i{display:grid;place-items:center;width:30px;height:30px;border-radius:8px;background:var(--cyan);color:var(--graphite);font-style:normal;font-size:20px}
+.back{color:var(--white);text-decoration:none;font-weight:600;font-size:15px;border-bottom:2px solid var(--cyan);padding-bottom:2px;white-space:nowrap}
+.back:hover{color:var(--cyan)}
+
+/* Title band */
+.hero{background:var(--graphite);color:var(--white);padding:clamp(40px,7vw,88px) 0 clamp(36px,5vw,60px)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:700 13px/1 var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin:0 0 18px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--cyan)}
+h1{margin:0;font:900 clamp(40px,7vw,84px)/.95 var(--f-display);font-stretch:75%;text-transform:uppercase;letter-spacing:-.005em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--cyan)}
+.meta{display:flex;flex-wrap:nowrap;gap:8px clamp(14px,2.2vw,32px);margin:26px 0 0;color:var(--on-dark-soft);font-size:clamp(13px,1.2vw,15px)}
+.meta>span{white-space:nowrap}
+@media (max-width:760px){.meta{flex-direction:column;gap:6px;font-size:15px}}
+.meta b{color:var(--white);font-weight:600}
+.meta a{color:var(--white);text-decoration:none;border-bottom:2px solid var(--cyan)}
+
+/* Body */
+main{padding:clamp(32px,5vw,64px) 0 clamp(56px,8vw,96px)}
+.doc{background:var(--white);border:1px solid var(--line-light);border-radius:24px;padding:clamp(24px,5vw,64px) clamp(20px,4vw,64px)}
+.doc .summary{border-left:4px solid var(--cyan);background:rgba(0,217,232,.08);border-radius:0 14px 14px 0;padding:18px 20px;margin:0 0 36px;font-weight:500}
+.doc h2{font:800 clamp(22px,2.6vw,28px)/1.15 var(--f-display);font-stretch:85%;margin:40px 0 12px;padding-top:28px;border-top:1px solid var(--line-light);display:flex;gap:14px;align-items:baseline}
+.doc h2.first{border-top:0;padding-top:0;margin-top:0}
+.doc h2 span{font:800 14px/1 var(--f-body);color:var(--cyan-ink);letter-spacing:.06em;min-width:24px}
+.doc p,.doc ul{margin:0 0 14px;color:var(--ink-soft)}
+.doc ul{padding-left:22px}
+.nw{white-space:nowrap}
+.doc li{margin-bottom:6px}
+.doc strong{color:var(--ink)}
+.todo{display:block;border:1.5px dashed #9FB0BA;border-radius:12px;padding:14px 16px;color:#6B7883;font-style:italic;background:var(--mist)}
+.contact{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:8px}
+.contact a{font-weight:700;color:var(--ink);text-decoration:none;border-bottom:3px solid var(--cyan)}
+
+.notice-box{background:var(--graphite);color:var(--white);border-radius:18px;padding:22px 24px;margin:0 0 32px;position:relative;overflow:hidden}
+.notice-box::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--cyan)}
+.notice-box h2{all:unset;display:block;font:900 clamp(20px,2.4vw,26px)/1.1 var(--f-display);font-stretch:80%;text-transform:uppercase;letter-spacing:.01em;margin:0 0 10px;color:var(--cyan)}
+.doc .notice-box p{color:var(--on-dark-soft);margin:0 0 8px}
+.doc .notice-box p:last-child{margin:0}
+.doc .notice-box strong{color:var(--white)}
+.toc{border:1px solid var(--line-light);border-radius:16px;padding:18px 22px;margin:0 0 40px;background:var(--mist)}
+.toc p{margin:0 0 8px!important;font:700 13px/1 var(--f-body)!important;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)!important}
+.toc ol{margin:0;padding:0;list-style:none;columns:2;column-gap:28px}
+.toc li{margin:0 0 6px;break-inside:avoid}
+.toc a{color:var(--ink-soft);text-decoration:none;font-size:15px}
+.toc a:hover{color:var(--cyan-ink);text-decoration:underline}
+.toc b{color:var(--cyan-ink);font-size:13px;margin-right:6px}
+@media (max-width:560px){.toc ol{columns:1}}
+.doc h2{scroll-margin-top:20px}
+.ph{background:#FFF4CC;color:#5C4500;border:1px dashed #C9A227;border-radius:6px;padding:0 6px;font-weight:600;font-style:normal;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.hero .ph{background:rgba(255,244,204,.14);color:#FFE38A;border-color:rgba(255,227,138,.5)}
+.def{display:grid;grid-template-columns:max-content 1fr;gap:6px 18px;margin:0 0 14px;color:var(--ink-soft)}
+.def dt{font-weight:700;color:var(--ink)}
+.def dd{margin:0}
+@media (max-width:480px){.def{grid-template-columns:1fr;gap:2px}.def dd{margin-bottom:8px}}
+
+/* Footer */
+footer{background:var(--graphite);color:var(--on-dark-soft);padding:40px 0;font-size:15px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center}
+.foot a{color:var(--white);text-decoration:none;font-weight:600}
+.foot a:hover{color:var(--cyan)}
+.foot-links{display:flex;flex-wrap:wrap;gap:8px 24px}
+
+@media print{
+  .hdr-band,.hero,footer{background:none;color:#000}
+  .logo,.back{color:#000}.back{display:none}
+  .doc{border:0;padding:0}
+  h1 em{color:#000}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#notice">Skip to policy</a>
+<div class="hdr-band">
+  <div class="wrap hdr">
+    <a class="logo" href="../" aria-label="PARKUS home"><i aria-hidden="true">P</i>PARKUS</a>
+    <a class="back" href="../">Back to parkus.net</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap"><div class="col">
+    <p class="eyebrow">ALPR/LPR Privacy &amp; Usage Policy</p>
+    <h1>License Plate <em>Recognition</em></h1>
+    <p class="meta"><span>Operator: <b>Parking Solutions, LLC</b></span><span>Last updated: <b>November 6, 2026</b></span><span>Privacy contact: <b><a href="mailto:info@parkus.net" target="_blank" rel="noopener">info@parkus.net</a></b></span></p>
+  </div></div>
+</header>
+
+<main id="notice">
+  <div class="wrap">
+    <article class="doc"><div class="col">
+      <!-- Text approved by PARKUS (2026-11-03). Bracketed placeholders must be filled before the page goes live on the domain. -->
+      <section class="notice-box" aria-labelledby="notice-h">
+        <h2 id="notice-h">Notice: License plate recognition in use</h2>
+        <p><strong>Automated license plate recognition (ALPR/LPR) technology is in operation at this location.</strong></p>
+        <p>Vehicles entering, exiting, or parked on this property may have their license plate numbers, vehicle images, and associated date, time, and location information collected and recorded.</p>
+      </section>
+
+      <nav class="toc" aria-label="Policy sections">
+        <p>Contents</p>
+        <ol>
+          <li><a href="#purpose"><b>01</b>Purpose and Scope</a></li>
+          <li><a href="#collected"><b>02</b>Information Collected</a></li>
+          <li><a href="#uses"><b>03</b>Authorized Uses</a></li>
+          <li><a href="#personnel"><b>04</b>Authorized Personnel and Training</a></li>
+          <li><a href="#security"><b>05</b>Data Security and Monitoring</a></li>
+          <li><a href="#sharing"><b>06</b>Data Sharing and Disclosure</a></li>
+          <li><a href="#accuracy"><b>07</b>Data Accuracy and Disputes</a></li>
+          <li><a href="#retention"><b>08</b>Data Retention and Deletion</a></li>
+          <li><a href="#administration"><b>09</b>Privacy Administration</a></li>
+          <li><a href="#availability"><b>10</b>Policy Availability</a></li>
+          <li><a href="#updates"><b>11</b>Compliance and Updates</a></li>
+        </ol>
+      </nav>
+
+        <h2 id="purpose" class="first"><span>01</span>Purpose and Scope</h2>
+        <p>The parking operator uses automated license plate recognition (ALPR/LPR) technology to assist with parking management, access control, payment verification, parking enforcement, and property security at participating locations.</p>
+        <p>This policy describes how vehicle information is collected, accessed, used, stored, protected, shared, and deleted.</p>
+
+        <h2 id="collected"><span>02</span>Information Collected</h2>
+        <p>Depending on system capabilities, information collected may include:</p>
+        <ul>
+          <li>Vehicle license plate numbers and registration jurisdiction</li>
+          <li>Images of license plates and vehicles</li>
+          <li>Dates and times of vehicle entry, exit, or detection</li>
+          <li>Parking facility and camera location</li>
+          <li>Parking session, payment, and enforcement records</li>
+        </ul>
+        <p>Collection is limited to legitimate parking and property-management purposes.</p>
+
+        <h2 id="uses"><span>03</span>Authorized Uses</h2>
+        <p>ALPR information may be used only for the following authorized purposes:</p>
+        <ul>
+          <li>Monitoring parking occupancy and duration</li>
+          <li>Verifying valid parking sessions and payments</li>
+          <li>Administering permitted parking access</li>
+          <li>Identifying potential violations of posted parking rules</li>
+          <li>Investigating parking disputes and security incidents</li>
+          <li>Supporting lawful parking enforcement</li>
+          <li>Complying with valid legal obligations</li>
+        </ul>
+        <p>ALPR data shall not be accessed for personal curiosity, employee monitoring unrelated to parking administration, discriminatory purposes, or other unauthorized activities.</p>
+
+        <h2 id="personnel"><span>04</span>Authorized Personnel and Training</h2>
+        <p>Access shall be restricted to designated parking operations managers, authorized enforcement supervisors, the designated privacy administrator, and approved technology support personnel whose duties require access.</p>
+        <p>Authorized users must receive training covering permitted uses, privacy, account security, data accuracy, incident reporting, and confidentiality before receiving access.</p>
+
+        <h2 id="security"><span>05</span>Data Security and Monitoring</h2>
+        <p>The operator shall maintain reasonable administrative, technical, physical, and operational safeguards against unauthorized access, disclosure, alteration, or destruction.</p>
+        <p>Access shall be controlled through individual user credentials, role-based permissions, and system access logs where supported.</p>
+        <p>The designated privacy administrator shall periodically review access permissions, system activity, and compliance with this policy.</p>
+        <p>Suspected unauthorized access or security incidents shall be investigated and addressed in accordance with applicable law.</p>
+
+        <h2 id="sharing"><span>06</span>Data Sharing and Disclosure</h2>
+        <p>ALPR information may be disclosed to authorized parking technology providers, payment processors, property representatives, and enforcement service providers only when reasonably necessary for an authorized purpose and subject to appropriate safeguards.</p>
+        <p>Information may also be disclosed when required or otherwise permitted by applicable law.</p>
+        <p><strong>ALPR information shall not be sold or disclosed for unrelated advertising or marketing purposes.</strong></p>
+        <p>The operator shall document authorized sharing arrangements and restrict further use where appropriate.</p>
+
+        <h2 id="accuracy"><span>07</span>Data Accuracy and Disputes</h2>
+        <p>Automated plate recognition may produce incorrect or incomplete results.</p>
+        <p>Before taking consequential enforcement action, authorized personnel shall review relevant available records and investigate reasonable indications of an error.</p>
+        <p>Individuals may contact the operator to dispute a parking record or request correction of inaccurate information.</p>
+        <p>Verified errors shall be corrected where technically feasible and appropriate.</p>
+
+        <h2 id="retention"><span>08</span>Data Retention and Deletion</h2>
+        <p>Routine ALPR information is retained only for as long as reasonably necessary for the authorized purposes described in this policy.</p>
+        <p>Records associated with payment disputes, enforcement matters, security incidents, or legal obligations may be retained longer when reasonably necessary and legally permitted.</p>
+        <p>Upon expiration of the applicable retention period, records shall be deleted or securely disposed of according to documented procedures.</p>
+        <p>The operator shall periodically review retained records and retention settings.</p>
+
+        <h2 id="administration"><span>09</span>Privacy Administration</h2>
+        <p>The designated ALPR privacy and system custodian is:</p>
+        <dl class="def">
+          <dt>Title</dt><dd>Operations Director</dd>
+          <dt>Name</dt><dd>Vladimir Striganov</dd>
+          <dt>Business</dt><dd>Parking Solutions, LLC</dd>
+          <dt>Phone</dt><dd><a href="tel:+19493134114" target="_blank" rel="noopener">949-313-4114</a></dd>
+          <dt>Contact</dt><dd><a href="mailto:info@parkus.net" target="_blank" rel="noopener">info@parkus.net</a></dd>
+        </dl>
+        <p>This individual is responsible for implementing this policy, supervising access controls, reviewing data practices, addressing disputes, and coordinating incident responses.</p>
+
+        <h2 id="availability"><span>10</span>Policy Availability</h2>
+        <p>This policy shall be made available to the public in writing and conspicuously posted on the operator&rsquo;s website, if one exists.</p>
+        <p>Parking signage may provide a direct link or QR code to this policy.</p>
+
+        <h2 id="updates"><span>11</span>Compliance and Updates</h2>
+        <p>The operator shall periodically review this policy and its ALPR practices for compliance with applicable federal and California laws, including California Civil Code Sections <span class="nw">1798.90.5&ndash;1798.90.55</span>, as applicable.</p>
+        <p>This policy does not waive any rights or remedies provided by law.</p>
+    </div></article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="logo" href="../" aria-label="PARKUS home"><i aria-hidden="true">P</i>PARKUS</a>
+    <div class="foot-links">
+      <a href="../">parkus.net</a>
+      <a href="../privacy/">Privacy Policy</a>
+      <a href="mailto:info@parkus.net" target="_blank" rel="noopener">info@parkus.net</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
