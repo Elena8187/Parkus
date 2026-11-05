@@ -10,14 +10,14 @@
 <meta property="og:title" content="PARKUS | Turn Unused Space Into Income">
 <meta property="og:description" content="Explore land leasing, revenue sharing and managed parking with PARKUS. We turn unused lots and underused parking into managed, revenue-generating parking.">
 <meta name="twitter:card" content="summary_large_image">
-<!-- Preview address. On launch replace https://parkus-preview.netlify.app with https://www.parkus.net -->
-<meta property="og:url" content="https://parkus-preview.netlify.app/">
+<!-- Preview address. On launch replace https://elena8187.github.io/parkus with https://www.parkus.net -->
+<meta property="og:url" content="https://elena8187.github.io/parkus/">
 <meta property="og:site_name" content="PARKUS">
-<meta property="og:image" content="https://parkus-preview.netlify.app/og-image.png">
+<meta property="og:image" content="https://elena8187.github.io/parkus/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="PARKUS: Turn unused space into income">
-<meta name="twitter:image" content="https://parkus-preview.netlify.app/og-image.png">
+<meta name="twitter:image" content="https://elena8187.github.io/parkus/og-image.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20120%20120%22%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22120%22%20height%3D%22120%22%20rx%3D%2232.0%22%20fill%3D%22%2300D9E8%22/%3E%3Cpath%20d%3D%22M38.11770805664062%2087.2448V32.755199999999995H65.74000839843751Q70.8880083984375%2032.755199999999995%2074.49579462890625%2035.060338623046874Q78.103580859375%2037.36547724609375%2079.99293640136719%2041.48387724609374Q81.88229194335938%2045.60227724609374%2081.88229194335938%2051.09833862304687Q81.88229194335938%2056.75279999999999%2079.92207502441406%2060.973322753906245Q77.96185810546875%2065.1938455078125%2074.33844118652344%2067.55316826171875Q70.71502426757813%2069.912491015625%2065.64622426757813%2069.912491015625H54.43297573242188V87.2448ZM54.43297573242188%2057.536427539062494H60.91083383789062Q63.2764359375%2057.536427539062494%2064.33419147949219%2055.87636721191406Q65.39194702148438%2054.21630688476562%2065.39194702148438%2051.38178413085937Q65.39194702148438%2049.449722753906244%2064.95425390625%2048.09707724609375Q64.51656079101562%2046.74443173828124%2063.52342111816406%2046.01704760742187Q62.5302814453125%2045.289663476562495%2060.91083383789062%2045.289663476562495H54.43297573242188Z%22%20fill%3D%22%23101419%22/%3E%3C/svg%3E">
@@ -658,6 +658,14 @@ form{display:grid;gap:16px}
 .reveal.in{animation:rise .55s var(--ease) backwards}
 @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* Back to top */
+.to-top{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:60;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:rgba(16,20,25,.9);color:var(--cyan);border:1px solid rgba(0,217,232,.45);box-shadow:0 10px 28px rgba(0,0,0,.35);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease,visibility 0s linear .5s,background .3s ease,color .3s ease}
+.to-top.show{opacity:1;visibility:visible;transform:none;transition:opacity .5s ease,transform .5s ease,visibility 0s,background .3s ease,color .3s ease}
+.to-top:hover{background:var(--cyan);color:var(--graphite)}
+.to-top:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+.to-top svg{width:22px;height:22px}
+@media (max-width:600px){.to-top{width:46px;height:46px}}
 </style>
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
@@ -1186,6 +1194,7 @@ form{display:grid;gap:16px}
   <div class="foot-mark" aria-hidden="true">PARKUS</div>
 </footer>
 
+<button type="button" class="to-top" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg></button>
 <script>
 (function(){
   var ns='http://www.w3.org/2000/svg';
@@ -1215,6 +1224,13 @@ form{display:grid;gap:16px}
     document.querySelector('.site-header').classList.add('hide');}
   document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);
     if(!id||!document.getElementById(id))return;e.preventDefault();goTo(id);});
+
+  /* Back to top: appears after the hero, returns smoothly and shows the header again */
+  (function(){var t=document.getElementById('toTop');if(!t)return;var tick=false;
+    function upd(){t.classList.toggle('show',window.pageYOffset>window.innerHeight*0.9);tick=false;}
+    window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd);}},{passive:true});upd();
+    t.addEventListener('click',function(){try{window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});}catch(e){window.scrollTo(0,0);}
+      document.querySelector('.site-header').classList.remove('hide');t.blur();});})();
 
   /* Hero scene: skyline + perspective parking lot at dusk */
   var sky=document.getElementById('skyline'),ground=document.getElementById('ground');
